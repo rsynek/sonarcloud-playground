@@ -12,6 +12,17 @@
     <version.jacoco.plugin>0.8.1</version.jacoco.plugin>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.jacoco</groupId>
+        <artifactId>org.jacoco.agent</artifactId>
+        <classifier>runtime</classifier>
+        <version>${version.jacoco.plugin}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
