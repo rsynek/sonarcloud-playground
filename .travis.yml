@@ -13,7 +13,8 @@ jdk:
 script:
 - mvn --quiet clean install -Prun-code-coverage
 #- mvn --quiet jacoco:report jacoco:merge sonar:sonar -Preport-code-coverage
-- if [$TRAVIS_EVENT_TYPE == "pull_request"]; then
+- |
+  if [$TRAVIS_EVENT_TYPE == "pull_request"]; then
     echo pull request
   else
     echo branch
